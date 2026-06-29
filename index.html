@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DISCOV — Discador WhatsApp Top</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section id="setup" class="card">
+      <h1>DISCOV</h1>
+      <p>Discador WhatsApp Top</p>
+
+      <label>Cidade</label>
+      <select id="cidade">
+        <option>Caxias do Sul</option>
+        <option>Farroupilha</option>
+        <option>Bento Gonçalves</option>
+        <option>Encantado</option>
+        <option>Soledade</option>
+        <option>Veranópolis</option>
+        <option>Flores da Cunha</option>
+      </select>
+
+      <label>Campanha</label>
+      <select id="campanha">
+        <option>Implantes</option>
+        <option>Ortodontia</option>
+        <option>Avaliação</option>
+        <option>Profilaxia</option>
+        <option>Revisão</option>
+        <option>Reativação</option>
+        <option>Pós-venda</option>
+        <option>Personalizada</option>
+      </select>
+
+      <label>Responsável</label>
+      <input id="responsavel" placeholder="Nome da recepcionista" />
+
+      <label>Lista de contatos</label>
+      <textarea id="lista" placeholder="Cole assim: Nome;Telefone&#10;Maria;54999999999&#10;João;54988888888"></textarea>
+
+      <button onclick="iniciarCampanha()">Iniciar lista</button>
+      <button class="secondary" onclick="continuarCampanha()">Continuar campanha</button>
+    </section>
+
+    <section id="discador" class="card hidden">
+      <h2 id="nomeContato"></h2>
+      <p id="telefoneContato"></p>
+      <p id="infoCampanha"></p>
+      <p id="progresso"></p>
+
+      <a id="abrirWhatsapp" target="_blank" class="whatsapp">Abrir WhatsApp</a>
+
+      <label>Resultado</label>
+      <select id="resultado">
+        <option value="">Selecione</option>
+        <option>Agendou</option>
+        <option>Interessado</option>
+        <option>Não respondeu</option>
+        <option>Não atende</option>
+        <option>Número inválido</option>
+        <option>Sem interesse</option>
+        <option>Já é paciente</option>
+        <option>Reagendar</option>
+      </select>
+
+      <label>Observações</label>
+      <textarea id="observacao" placeholder="Ex: pediu retorno sexta-feira"></textarea>
+
+      <button onclick="salvarEProximo()">Salvar e próximo</button>
+      <button class="secondary" onclick="verRelatorio()">Ver relatório</button>
+    </section>
+
+    <section id="relatorio" class="card hidden">
+      <h2>Relatório</h2>
+      <div id="resumo"></div>
+
+      <button onclick="baixarCSV()">Baixar CSV</button>
+      <button class="secondary" onclick="novaCampanha()">Nova campanha</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
