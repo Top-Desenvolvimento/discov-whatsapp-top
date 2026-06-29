@@ -4,8 +4,10 @@
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #101820;
+  font-family: Inter, Arial, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(0, 200, 83, 0.18), transparent 35%),
+    #0b1118;
   color: #ffffff;
 }
 
@@ -19,77 +21,141 @@ body {
 
 .card {
   width: 100%;
-  max-width: 520px;
-  background: #172331;
+  max-width: 560px;
+  background: rgba(18, 27, 38, 0.96);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 24px;
   padding: 28px;
-  border-radius: 18px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
 }
 
-h1, h2 {
-  margin-top: 0;
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  background: #00c853;
+  color: #04130a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 24px;
+}
+
+h1,
+h2 {
+  margin: 0;
 }
 
 p {
-  color: #d6dde6;
+  color: #c8d1dc;
 }
 
 label {
   display: block;
   margin-top: 16px;
-  margin-bottom: 6px;
-  font-weight: bold;
+  margin-bottom: 7px;
+  color: #dce5ef;
+  font-weight: 700;
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
   width: 100%;
-  padding: 13px;
-  border-radius: 10px;
-  border: 1px solid #2f4054;
-  background: #0f1720;
+  border: 1px solid #2b3a4d;
+  background: #0d1520;
   color: #ffffff;
+  border-radius: 14px;
+  padding: 14px;
   font-size: 15px;
+  outline: none;
 }
 
 textarea {
-  min-height: 120px;
+  min-height: 130px;
   resize: vertical;
 }
 
-button, .whatsapp {
-  display: block;
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #00c853;
+}
+
+button,
+.whatsapp {
   width: 100%;
+  display: block;
   margin-top: 18px;
-  padding: 14px;
+  padding: 15px;
   border: none;
-  border-radius: 12px;
+  border-radius: 14px;
   background: #00c853;
-  color: #ffffff;
-  font-weight: bold;
+  color: #04130a;
+  font-weight: 900;
   font-size: 16px;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
 }
 
-button:hover, .whatsapp:hover {
-  opacity: 0.9;
+button:hover,
+.whatsapp:hover {
+  opacity: 0.92;
 }
 
 .secondary {
-  background: #2f4054;
+  background: #263548;
+  color: #ffffff;
 }
 
-.hidden {
-  display: none;
+.danger {
+  background: #ff4d4f;
+  color: #ffffff;
 }
 
-#nomeContato {
-  font-size: 30px;
-  margin-bottom: 8px;
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+  color: #8fa1b5;
+  font-size: 14px;
 }
 
-#telefoneContato {
-  font-size: 20px;
+.contador {
+  color: #8fa1b5;
+}
+
+.discador h2 {
+  font-size: 34px;
+  margin-bottom: 4px;
+}
+
+.telefone {
+  font-size: 22px;
   color: #00e676;
+  font-weight: 800;
+}
+
+.muted {
+  color: #9fb0c3;
+}
+
+.report {
+  margin-top: 20px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin: 18px 0;
 }
