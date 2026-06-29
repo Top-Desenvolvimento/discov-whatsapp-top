@@ -2,14 +2,13 @@
   "name": "discov-whatsapp-top",
   "version": "1.0.0",
   "description": "DISCOV — Discador WhatsApp Top",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "deploy": "vite build"
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@vitejs/plugin-basic-ssl": "^1.2.0",
     "vite": "^5.4.0"
   },
   "devDependencies": {}
